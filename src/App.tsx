@@ -4,14 +4,14 @@
  */
 
 import React, { useState } from 'react';
-import { 
-  Beaker, 
-  Cpu, 
-  TrendingUp, 
-  Linkedin, 
-  GraduationCap, 
-  ExternalLink, 
-  FileText, 
+import {
+  Beaker,
+  Cpu,
+  TrendingUp,
+  Linkedin,
+  GraduationCap,
+  ExternalLink,
+  FileText,
   ArrowRight,
   Github,
   Mail,
@@ -46,9 +46,9 @@ const pillars = [
     color: 'bg-emerald-50/50 text-emerald-700 border-emerald-100',
     projects: [
       {
-       title: 'Generative Multi-Objective BO for De Novo Design',
-       desc: 'Developed a "Generate-then-Optimize" framework using BoTorch and generative SMILES models to enable sample-efficient, multi-objective molecular design within massive discrete chemical spaces.',
-       impact: 'Accelerates lead discovery by enabling scalable batch evaluations that efficiently identify Pareto-optimal candidates, balancing conflicting objectives such as potency, synthetic accessibility, and ADMET profiles.'
+        title: 'Generative Multi-Objective BO for De Novo Design',
+        desc: 'Developed a "Generate-then-Optimize" framework using BoTorch and generative SMILES models to enable sample-efficient, multi-objective molecular design within massive discrete chemical spaces.',
+        impact: 'Accelerates lead discovery by enabling scalable batch evaluations that efficiently identify Pareto-optimal candidates, balancing conflicting objectives such as potency, synthetic accessibility, and ADMET profiles.'
       },
       {
         title: 'Neural ODEs for Dynamic Catalyst Deactivation',
@@ -176,7 +176,7 @@ const skillCategories = [
   {
     name: 'Databse, Cloud & MLops',
     icon: Terminal,
-    skills: ['Azure','SQL','Devops','Git','CI/CD','pipelines','docker/container','API']
+    skills: ['Azure', 'SQL', 'Devops', 'Git', 'CI/CD', 'pipelines', 'docker/container', 'API']
   }
 ];
 
@@ -215,14 +215,14 @@ export default function App() {
       {/* Pillar Detail Overlay */}
       <AnimatePresence>
         {activePillar && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-paper/95 backdrop-blur-xl overflow-y-auto"
           >
             <div className="max-w-4xl mx-auto px-6 py-20 min-h-screen flex flex-col">
-              <button 
+              <button
                 onClick={() => setActivePillar(null)}
                 className="self-end mb-12 p-3 rounded-full bg-black/5 hover:bg-black/10 transition-colors"
               >
@@ -248,7 +248,7 @@ export default function App() {
                   <h3 className="mono-label mb-6 text-black">Key Projects & Impact</h3>
                   <div className="grid gap-6">
                     {activePillar.projects.map((project, i) => (
-                      <motion.div 
+                      <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -279,7 +279,7 @@ export default function App() {
                       </span>
                     ))}
                   </div>
-                  <button 
+                  <button
                     onClick={() => setActivePillar(null)}
                     className="text-xs font-mono uppercase tracking-widest hover:underline"
                   >
@@ -311,7 +311,7 @@ export default function App() {
       <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="mb-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -325,14 +325,14 @@ export default function App() {
                 <MapPin size={10} /> Madison, WI
               </span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[0.95] tracking-tight">
               Scientific Machine Learning <br />
               <span className="text-black/40 italic font-serif">& AI for Science.</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-charcoal/70 mb-10 leading-relaxed max-w-2xl font-light">
-              Innovative leader with 8+ years of experience delivering production-ready solutions for complex chemical and molecular systems. 
+              Innovative leader with 8+ years of experience delivering production-ready solutions for complex chemical and molecular systems.
               Expert in bridging advanced scientific modeling with AI.
             </p>
 
@@ -350,7 +350,7 @@ export default function App() {
         <section className="mb-24">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -384,7 +384,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((pillar, i) => (
-              <motion.div 
+              <motion.div
                 key={pillar.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -403,7 +403,7 @@ export default function App() {
                 <p className="text-sm text-charcoal/60 mb-6 flex-grow leading-relaxed">
                   {pillar.description}
                 </p>
-                
+
                 <div className="space-y-4">
                   <div>
                     <span className="mono-label block mb-2">Core Tracks</span>
@@ -416,7 +416,7 @@ export default function App() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 pt-4 border-t border-black/5">
                     {pillar.keywords.map((k, j) => (
                       <span key={j} className="text-[9px] font-mono px-2 py-0.5 bg-black/5 rounded uppercase tracking-wider opacity-60">
@@ -441,7 +441,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillCategories.map((cat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -475,9 +475,9 @@ export default function App() {
                 <span className="mono-label">Research</span>
                 <h2 className="text-3xl font-bold mt-2">Selected Publications</h2>
               </div>
-              <a 
-                href="https://scholar.google.com/citations?user=_-lid8kAAAAJ&hl=en" 
-                target="_blank" 
+              <a
+                href="https://scholar.google.com/citations?user=_-lid8kAAAAJ&hl=en"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest hover:underline"
               >
@@ -501,7 +501,7 @@ export default function App() {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-8">
               <button className="w-full py-4 border border-dashed border-black/20 rounded-xl text-xs font-mono uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all">
                 View all 20+ papers on Google Scholar
@@ -520,16 +520,16 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="glass-card overflow-hidden flex flex-col"
             >
               <div className="aspect-video bg-black/5 relative overflow-hidden mb-6 rounded-xl border border-black/5">
-                <img 
-                  src="/figures/MTPBO.png" 
-                  alt="Multi-Task Preferential BO" 
+                <img
+                  src="/figures/MTPBO.png"
+                  alt="Multi-Task Preferential BO"
                   className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
@@ -550,7 +550,7 @@ export default function App() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -561,7 +561,7 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">LLM + Collaborative Bayesian Optimization</h3>
               <p className="text-sm text-charcoal/50 italic mb-8">
-                Content in development. Exploring the intersection of Large Language Models and expert-in-the-loop chemical optimization.
+                Content in development. Exploring extracting domain-specific knowledge from Large Language Models and incorporating them as prior information for Bayesian Optimization applied to reaction, material and process optimization.
               </p>
               <div className="flex items-center gap-2 text-xs font-mono opacity-40 uppercase tracking-widest">
                 <Zap size={14} /> Coming Soon
@@ -576,7 +576,7 @@ export default function App() {
           <div className="rounded-3xl bg-charcoal text-paper p-12 shadow-2xl relative overflow-hidden">
             {/* Decorative background element */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
               <div>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-emerald-400 mb-4 block">Connect</span>
@@ -616,7 +616,7 @@ export default function App() {
               © 2024 Scientific Modernism
             </span>
           </div>
-          
+
           <div className="flex gap-8">
             <a href="#" className="text-[10px] font-mono uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">Back to Top</a>
             <a href="https://scholar.google.com/citations?user=_-lid8kAAAAJ&hl=en" className="text-[10px] font-mono uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">Scholar</a>
