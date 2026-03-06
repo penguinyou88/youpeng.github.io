@@ -231,7 +231,7 @@ export default function App() {
 
               <div className="flex items-center gap-6 mb-8">
                 <div className={cn("w-20 h-20 rounded-2xl flex items-center justify-center border", activePillar.color)}>
-                  <activePillar.icon size={40} />
+                  {React.createElement(activePillar.icon, { size: 40 })}
                 </div>
                 <div>
                   <span className="mono-label">Expertise Detail</span>
@@ -394,7 +394,7 @@ export default function App() {
                 className="glass-card flex flex-col h-full group cursor-pointer hover:border-black/20"
               >
                 <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-6 border transition-transform group-hover:scale-110", pillar.color)}>
-                  <pillar.icon size={24} />
+                  {React.createElement(pillar.icon, { size: 24 })}
                 </div>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-bold">{pillar.title}</h3>
@@ -451,7 +451,7 @@ export default function App() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center">
-                    <cat.icon size={16} />
+                    {React.createElement(cat.icon, { size: 16 })}
                   </div>
                   <h3 className="font-bold text-sm uppercase tracking-wider">{cat.name}</h3>
                 </div>
